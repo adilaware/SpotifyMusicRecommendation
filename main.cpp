@@ -5,6 +5,7 @@ int main() {
 
     int mood;
     int genre;
+    int activity;
 
     cout << "========================================\n";
     cout << "     SPOTIFY MUSIC RECOMMENDATION\n";
@@ -34,6 +35,17 @@ int main() {
     cin >> genre;
 
     cout << "\nYou selected genre option: " << genre << endl;
+
+    cout << "\nSelect your current activity:\n";
+    cout << "1. Studying\n";
+    cout << "2. Exercising\n";
+    cout << "3. Driving\n";
+    cout << "4. Relaxing\n";
+
+    cout << "\nEnter your choice (1-4): ";
+    cin >> activity;
+
+    cout << "\nYou selected activity option: " << activity << endl;
 
     return 0;
 }
