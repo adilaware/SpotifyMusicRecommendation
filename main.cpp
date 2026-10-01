@@ -2,13 +2,19 @@
 #include <limits>
 using namespace std;
 
+// Spotify Music Recommendation Assistant
+// This program recommends music based on the user's
+// mood, preferred genre, and current activity.
+
 int main() {
 
+    // Variables for user selections
     int mood;
     int genre;
     int activity;
     char again;
 
+    // this is also a variables but specifically for recommendation information
     string moodName;
     string genreName;
     string activityName;
@@ -23,8 +29,10 @@ int main() {
     cout << "\nWelcome!\n";
     cout << "Let's find the perfect music for you.\n";
 
+    // Repeat the recommendation process if user requested
     do {
 
+        // Step 1: Get the user's current mood
         cout << "\nSelect your mood:\n";
         cout << "1. Happy\n";
         cout << "2. Sad\n";
@@ -46,6 +54,7 @@ int main() {
 
         cout << "\nYou selected mood option: " << mood << endl;
 
+        // Step 2: Get the user's preferred music genre
         cout << "\nSelect your preferred genre:\n";
         cout << "1. Pop\n";
         cout << "2. Hip-Hop\n";
@@ -67,6 +76,7 @@ int main() {
 
         cout << "\nYou selected genre option: " << genre << endl;
 
+        // Step 3: Get the user's current activity
         cout << "\nSelect your current activity:\n";
         cout << "1. Studying\n";
         cout << "2. Exercising\n";
@@ -88,6 +98,8 @@ int main() {
 
         cout << "\nYou selected activity option: " << activity << endl;
 
+
+        // Convert numeric selections into readable names
         switch (mood) {
         case 1:
             moodName = "Happy";
@@ -133,8 +145,7 @@ int main() {
             break;
         }
 
-        // Music recommendation logic
-
+        // Recommend a song based on mood and genre (Music recommendation logic)
         if (mood == 1 && genre == 1) {
             song = "Levitating";
             artist = "Dua Lipa";
@@ -203,6 +214,7 @@ int main() {
             artist = "Imagine Dragons";
         }
 
+        // It create an explanation based on the user's activity
         if (activity == 1) {
         reason = "This song matches your selected mood and genre and can accompany your study session.";
         }
@@ -216,6 +228,7 @@ int main() {
             reason = "This song matches your selected mood and genre and suits a relaxing listening session.";
         }
 
+        // Display the final personalised recommendation
         cout << "\n========================================\n";
         cout << "       YOUR MUSIC RECOMMENDATION\n";
         cout << "========================================\n";
@@ -234,7 +247,8 @@ int main() {
 
         cout << "\n========================================\n";
 
-
+    
+    // Ask the user whether they want another recommendation
     cout << "\nWould you like another recommendation? (Y/N): ";
     cin >> again;
 
@@ -244,7 +258,7 @@ int main() {
         cout << "Invalid choice! Please enter Y or N: ";
         cin >> again;
     } 
-    
+
     }   while (again == 'Y' || again == 'y');
 
     cout << "\n========================================\n";
