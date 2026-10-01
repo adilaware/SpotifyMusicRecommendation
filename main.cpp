@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 using namespace std;
 
 int main() {
@@ -27,8 +28,18 @@ int main() {
     cout << "3. Relaxed\n";
     cout << "4. Energetic\n";
 
+    while (true) {
     cout << "\nEnter your choice (1-4): ";
-    cin >> mood;
+
+        if (cin >> mood && mood >= 1 && mood <= 4) {
+            break;
+        }
+
+        cout << "Invalid input! Please enter a number between 1 and 4.\n";
+
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
 
     cout << "\nYou selected mood option: " << mood << endl;
 
@@ -38,8 +49,18 @@ int main() {
     cout << "3. R&B\n";
     cout << "4. Rock\n";
 
+    while (true) {
     cout << "\nEnter your choice (1-4): ";
-    cin >> genre;
+
+        if (cin >> genre && genre >= 1 && genre <= 4) {
+            break;
+        }
+
+        cout << "Invalid input! Please enter a number between 1 and 4.\n";
+
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
 
     cout << "\nYou selected genre option: " << genre << endl;
 
@@ -49,8 +70,18 @@ int main() {
     cout << "3. Driving\n";
     cout << "4. Relaxing\n";
 
+    while (true) {
     cout << "\nEnter your choice (1-4): ";
-    cin >> activity;
+
+        if (cin >> activity && activity >= 1 && activity <= 4) {
+            break;
+        }
+
+        cout << "Invalid input! Please enter a number between 1 and 4.\n";
+
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
 
     cout << "\nYou selected activity option: " << activity << endl;
 
